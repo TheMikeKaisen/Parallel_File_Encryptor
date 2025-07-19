@@ -15,10 +15,9 @@ IO::IO(const string &file_path){
 }
 
 
-fstream IO::getFileStream(){
-    return move(file_stream);
+std::fstream& IO::getFileStream(){
+    return file_stream;
 }
-
 // if file is open then close it!
 IO::~IO(){
     if(file_stream.is_open()){

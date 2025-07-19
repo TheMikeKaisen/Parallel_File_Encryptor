@@ -1,4 +1,4 @@
-CXX = g++
+CXX =  clang++
 CXXFLAGS = -std=c++17 -g -Wall -I. -Isrc/app/encryptDecrypt -Isrc/app/fileHandling -Isrc/app/processes
 
 MAIN_TARGET = encrypt_decrypt

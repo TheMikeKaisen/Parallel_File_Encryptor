@@ -10,13 +10,13 @@ ProcessManagement::ProcessManagement(){}
 // i.e. two process cannot simultaneouously access one task
 // address of task cannot be copied. Only the ownership can be passed on by using move() function.
 bool ProcessManagement::submitToQueue(unique_ptr<Task> task){
-    taskQueue.push(move(task));
+    taskQueue.push(std::move(task));
     return true;
 }
 
 void ProcessManagement::executeTasks(){
     while(!taskQueue.empty()){
-        auto taskToExecute = move(taskQueue.front()); // passing the ownership is necessary due to unique pointer
+        auto taskToExecute = std::move(taskQueue.front()); // passing the ownership is necessary due to unique pointer
         taskQueue.pop();
         cout << "Executing task: " << taskToExecute->toString() << endl;
         executeCryption(taskToExecute->toString());

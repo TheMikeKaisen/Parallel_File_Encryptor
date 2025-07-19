@@ -9,7 +9,7 @@ class IO{
     public:
         IO(const std::string &file_path);
         ~IO();
-        std::fstream getFileStream();
+        std::fstream& getFileStream();
 
     private:
         std::fstream file_stream;
