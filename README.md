@@ -28,28 +28,6 @@ A high-performance C++-based file encryption/decryption system designed with mod
 | **File System** | std::filesystem | Directory traversal |
 | **Memory Management** | Smart Pointers | Safe memory handling |
 
-## 📁 Project Architecture
-
-`textParallel_File_Encryptor/
-├── src/app/
-│   ├── encryptDecrypt/          # Encryption/Decryption logic
-│   │   ├── Cryption.cpp         # Core encryption implementation
-│   │   ├── Cryption.hpp         # Encryption interface
-│   │   └── CryptionMain.cpp     # Standalone encryption tester
-│   ├── fileHandling/            # File I/O operations
-│   │   ├── IO.cpp               # File stream management
-│   │   ├── IO.hpp               # File I/O interface
-│   │   └── ReadEnv.cpp          # Environment variable reader
-│   └── processes/               # Task management system
-│       ├── ProcessManagement.cpp # Task queue implementation
-│       ├── ProcessManagement.hpp # Process management interface
-│       └── Task.hpp             # Task serialization/deserialization
-├── test/                        # Test files and data
-│   └── test1.txt               # Sample test file
-├── .env                        # Configuration (encryption key)
-├── Makefile                    # Build configuration
-└── main.cpp                    # Application entry point`
-
 ## Quick Start
 
 ## Prerequisites
